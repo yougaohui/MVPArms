@@ -1,0 +1,1 @@
+-keep class me.jessyan.mvparms.demo.app.GlobalConfiguration
