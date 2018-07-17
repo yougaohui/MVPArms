@@ -7,6 +7,7 @@ import android.os.Message;
 import android.view.View;
 
 import com.jess.arms.base.BaseActivity;
+import com.jess.arms.mvp.IPresenter;
 
 import me.imid.swipebacklayout.lib.SwipeBackLayout;
 import me.imid.swipebacklayout.lib.Utils;
@@ -17,7 +18,7 @@ import me.imid.swipebacklayout.lib.app.SwipeBackActivityHelper;
  * Created by gaohui.you on 2018/7/17 0017
  * Email:839939978@qq.com
  */
-public abstract class MySupportBaseActivity extends BaseActivity implements SwipeBackActivityBase, Handler.Callback {
+public abstract class MySupportBaseActivity<P extends IPresenter> extends BaseActivity<P> implements SwipeBackActivityBase, Handler.Callback {
     private SwipeBackActivityHelper mHelper;
 
     protected Context mContext;

@@ -7,12 +7,13 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 
 import com.jess.arms.base.BaseFragment;
+import com.jess.arms.mvp.IPresenter;
 
 /**
  * Created by gaohui.you on 2018/7/17 0017
  * Email:839939978@qq.com
  */
-public abstract class MySupportBaseFragment extends BaseFragment implements Handler.Callback{
+public abstract class MySupportBaseFragment<P extends IPresenter> extends BaseFragment<P> implements Handler.Callback {
     protected Context mContext;
     protected Handler mHandler;
 
