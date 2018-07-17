@@ -10,9 +10,6 @@ import org.simple.eventbus.EventBus;
  */
 public class EventBusUtils extends BaseUtils {
 
-    public EventBusUtils() {
-    }
-
     /**
      * 取消订阅
      */
