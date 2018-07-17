@@ -97,4 +97,6 @@ dependencies {
     compile 'com.blankj:utilcode:1.12.6'
     //差分包
     implementation rootProject.ext.dependencies["multidex"]
+    //侧滑控件
+    implementation 'me.imid.swipebacklayout.lib:library:1.1.0'
 }
