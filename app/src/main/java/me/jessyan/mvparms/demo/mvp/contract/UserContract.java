@@ -15,7 +15,7 @@
  */
 package me.jessyan.mvparms.demo.mvp.contract;
 
-import android.app.Activity;
+import android.support.v4.app.FragmentActivity;
 
 import com.jess.arms.mvp.IModel;
 import com.jess.arms.mvp.IView;
@@ -41,7 +41,7 @@ public interface UserContract {
     interface View extends IView {
         void startLoadMore();
         void endLoadMore();
-        Activity getActivity();
+        FragmentActivity getActivity();
         //申请权限
         RxPermissions getRxPermissions();
     }

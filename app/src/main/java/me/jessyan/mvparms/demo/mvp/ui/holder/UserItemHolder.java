@@ -22,7 +22,6 @@ import android.widget.TextView;
 import com.jess.arms.base.BaseHolder;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.http.imageloader.ImageLoader;
-import com.jess.arms.http.imageloader.glide.ImageConfigImpl;
 import com.jess.arms.utils.ArmsUtils;
 
 import butterknife.BindView;
@@ -59,21 +58,10 @@ public class UserItemHolder extends BaseHolder<User> {
     public void setData(User data, int position) {
         Observable.just(data.getLogin())
                 .subscribe(s -> mName.setText(s));
-
-        //itemView 的 Context 就是 Activity, Glide 会自动处理并和该 Activity 的生命周期绑定
-        mImageLoader.loadImage(itemView.getContext(),
-                ImageConfigImpl
-                        .builder()
-                        .url(data.getAvatarUrl())
-                        .imageView(mAvatar)
-                        .build());
     }
 
 
     @Override
     protected void onRelease() {
-        mImageLoader.clear(mAppComponent.application(), ImageConfigImpl.builder()
-                .imageViews(mAvatar)
-                .build());
     }
 }

@@ -15,11 +15,11 @@
  */
 package me.jessyan.mvparms.demo.mvp.ui.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 
@@ -152,7 +152,7 @@ public class UserActivity extends MySupportBaseActivity<UserPresenter> implement
     }
 
     @Override
-    public Activity getActivity() {
+    public FragmentActivity getActivity() {
         return this;
     }
 
