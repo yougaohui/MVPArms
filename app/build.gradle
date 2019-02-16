@@ -94,7 +94,7 @@ dependencies {
     //greendao
     implementation 'org.greenrobot:greendao:3.2.2'
     //工具类框架
-    compile 'com.blankj:utilcode:1.12.6'
+    implementation 'com.blankj:utilcode:1.12.6'
     //差分包
     implementation rootProject.ext.dependencies["multidex"]
     //侧滑控件
